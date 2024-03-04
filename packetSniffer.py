@@ -1,3 +1,5 @@
+import binascii
+
 from scapy.all import *
 from scapy.layers.inet import IP, TCP, UDP
 
@@ -12,7 +14,6 @@ def pkt_sniffer():
 
     def print_pkt(pkt):
         try:
-            print(pkt)
             if pkt is not None and IP in pkt:
                 sniffed_pkt = {'src_ip': pkt[IP].src,
                                'dst_ip': pkt[IP].dst,

@@ -1,4 +1,3 @@
-import requests
 from flask import Flask, jsonify, request
 from packetSniffer import pkt_sniffer, set_active, get_packets, clear_packets, set_filters
 from threading import Thread
